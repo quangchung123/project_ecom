@@ -1,0 +1,275 @@
+@use "global";
+$text-color-primary: #363636;
+$text-color-secondary: white;
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+}
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container {
+  width: 960px;
+  height: auto;
+  background-color: $text-color-secondary;
+  box-shadow: 0 1px 6px 1px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  &__header {
+    @include flex-center;
+    height: 200px;
+    position: relative;
+    &__banner {
+      background-color: global.$banner-color;
+      height: 25px;
+      width: 90px;
+      border-radius: 0 0 8px 8px;
+      box-sizing: border-box;
+      padding: 3px 2px 0 6px;
+      color: $text-color-secondary;
+      font-style: normal;
+      position: absolute;
+      left: 25px;
+    }
+    &__image {
+      box-sizing: border-box;
+      padding-top: 40px;
+      &__product {
+        width: 130px;
+        height: 130px;
+      }
+    }
+    &__title {
+      box-sizing: border-box;
+      padding: 30px 6px 0 6px;
+      width: 60%;
+      border-right: 2px solid global.$secondary-color;
+      &__info {
+        display: flex;
+        &__brand {
+          padding-right: 10px;
+          color: $text-color-primary;
+          font-size: 1.5rem;
+        }
+        &__discount {
+          background-color: global.$secondary-color;
+          border-radius: 4px;
+          font-size: 10px;
+          box-sizing: border-box;
+          width: 50px;
+          height: 25px;
+          padding: 8px 6px 0 5px;
+        }
+      }
+      &__description {
+        font-style: normal;
+        color: $text-color-primary;
+        font-size: 18px;
+      }
+      &__actions {
+        display: flex;
+        margin-top: 30px;
+        font-style: normal;
+        &__feature {
+          margin-right: 5px;
+        }
+      }
+    }
+    &__price {
+      width: 20%;
+      @include flex-center;
+      @include flex-column;
+      &__score {
+        display: flex;
+        align-items: center;
+        &__value {
+          color: global.$primary-color;
+          font-weight: 700;
+          font-size: 30px;
+          margin-right: 5px;
+        }
+      }
+      &__group {
+        @include flex-column;
+      }
+      &__button {
+        border: none;
+        color: $text-color-secondary;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 15px;
+        background-color: global.$primary-color;
+        border-radius: 20px;
+        padding: 8px 40px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      &__button:hover {
+        cursor: pointer;
+      }
+      &__compare__text {
+        font-size: 15px;
+        margin-right: 5px;
+      }
+    }
+  }
+  &__body {
+    display: flex;
+    box-sizing: border-box;
+    padding: 15px 10px 10px 20px;
+    height: 250px;
+    animation: modalFadeIn ease 2s;
+    border-top: 2px solid global.$secondary-color;
+    &__info {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      box-sizing: border-box;
+      padding: 10px 25px 10px 40px;
+      width: 50%;
+        &__detail {
+          ul {
+            margin-left: -40px !important;
+            li {
+              list-style-type: none;
+              margin-top: 14px;
+
+              i {
+                color: global.$primary-color;
+              }
+            }
+          }
+        }
+    }
+    &__market {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      box-sizing: border-box;
+      padding-top: 10px;
+      &__group {
+        display: flex;
+        width: 100%;
+        margin-top: 20px;
+        justify-content: space-between;
+        align-items: center;
+        &__btn {
+          border-radius: 21px;
+          border: 2px solid;
+          color: global.$primary-color;
+          font-size: 19px;
+          padding: 3px 24px;
+          font-weight: 600;
+          background-color: $text-color-secondary;
+        }
+        &__btn:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 288px;
+    height: auto;
+    &__header {
+      display: grid;
+      grid-template-areas:
+            "header header"
+            "content contentImage"
+            "footer footer";
+      height: auto;
+      &__banner {
+        grid-area: header;
+      }
+      &__image {
+        grid-area: contentImage;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 10px;
+        &__product {
+          width: 100px;
+          height: 100px;
+        }
+      }
+      &__title {
+        grid-area: footer;
+        width: 100%;
+        border-right: none;
+        text-align: center;
+        padding: 0 10px;
+        position: relative;
+        &__description {
+          font-size: 15px;
+          width: 250px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        &__actions {
+          display: none;
+        }
+        &__mobile {
+          height: 70px;
+          width: 100%;
+        }
+        &__info__brand {
+          font-size: 1rem;
+        }
+      }
+      &__price {
+        grid-area: content;
+        width: 100%;
+        order: -1;
+        &__score {
+          @include flex-column
+        }
+        &__group {
+          position: absolute;
+          flex-direction: column;
+          margin-top: 0;
+          top: 153px;
+          left: 25%;
+          box-sizing: border-box;
+          padding-top: 5px;
+        }
+        &__button {
+          margin-top: 0;
+          margin-right: 10px
+        }
+      }
+    }
+    &__body {
+      flex-direction: column;
+      padding: 15px 10px;
+      height: auto;
+      &__info,
+      &__market {
+        width: 100%;
+        padding: 5px 5px;
+      }
+      &__market__group {
+        flex-direction: row;
+        align-items: center;
+        margin-top: 10px;
+        &__btn {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+@keyframes modalFadeIn{
+  from{
+    opacity: 0;
+    transform: translateY(-140px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(-0px);
+  }
+}

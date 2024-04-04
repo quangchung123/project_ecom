@@ -1,5 +1,5 @@
 import React from 'react';
-import ItemProduct from "../../components/ItemProduct";
+import ItemProduct from "../../components/product/ItemProduct";
 import {listData} from "../../config";
 import '../../styles/listproduct.css'
 
