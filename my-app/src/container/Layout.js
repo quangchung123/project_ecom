@@ -1,6 +1,6 @@
 import React from 'react';
 import ShowListProduct from "../feature/products/ShowListProduct";
-import "../styles/layout.css";
+import "./layout.scss";
 const Layout = () => {
     return (
         <div className="root-main">

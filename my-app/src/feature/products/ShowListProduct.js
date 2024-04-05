@@ -1,7 +1,7 @@
 import React from 'react';
-import ItemProduct from "../../components/product/ItemProduct";
+import  ItemProduct from "../../components/product/ItemProduct";
 import {listData} from "../../config";
-import '../../styles/listproduct.css'
+import '../../styles/listproduct.scss'
 
 const ShowListProduct = () => {
     const dataProduct = [...listData];
@@ -9,7 +9,9 @@ const ShowListProduct = () => {
         <div className="list-product">
                 {
                     dataProduct.map((product, index) => (
-                        <ItemProduct  product={product}/>
+                        <div key={index}>
+                            <ItemProduct  product={product}/>
+                        </div>
                     ))
                 }
         </div>
