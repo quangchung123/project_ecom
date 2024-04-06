@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+body {
+  width: 100%;
+  height: auto;
+}
+li {
+  list-style-type: none;
+}
+button {
+  font-size: 15px;
+  font-weight: 600;
+  font-style: normal;
+  border-radius: 20px;
+}
+button:hover {
+  cursor: pointer;
+}

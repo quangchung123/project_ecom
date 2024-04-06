@@ -20,7 +20,7 @@ export const listData = [
                         icon: 'bi bi-amazon' // add image/icon link here
                     }
                 ]
-            }
+            },
         ]
     },
     {
