@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../styles/_product.scss';
+import '@/styles/_product.scss';
 import ProductMarket from "./ProductMarket";
 import ProductHighlight from "./ProductHighlight";
 

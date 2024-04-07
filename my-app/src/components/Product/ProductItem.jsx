@@ -51,7 +51,7 @@ const ProductItem = ({product}) => {
                         <span>score</span>
                     </div>
                     <div className="product__header__price__group">
-                        <MyButton onClick={handleShowDetail} style={"product__header__price--button"}>
+                        <MyButton onClick={handleShowDetail} styleModify={"product__header__price--button"}>
                             <span>More Info</span>
                         </MyButton>
                         <div className="product__header__price__compare">

@@ -1,4 +1,4 @@
-import ProductList from "../feature/Product/ProductList";
+import ProductList from "@/feature/Product/ProductList";
 import styles from "./Layout.module.scss";
 
 const Layout = () => {
