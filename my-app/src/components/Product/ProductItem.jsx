@@ -1,11 +1,11 @@
 import React, {useMemo, useState} from 'react';
 import "bootstrap-icons/font/bootstrap-icons.css";
-import '../../styles/_product.scss';
-import {winner} from "../../constant/user";
+import '@/styles/_product.scss';
+import {winner} from "@/constant/user";
 import {handleDataDetail} from "../../utils/help";
 import ProductDetail from "./ProductDetail";
 import _ from 'lodash';
-import MyButton from "../Elements/Buttons/MyButton";
+import MyButton from "@/components/Elements/Buttons/MyButton";
 const ProductItem = ({product}) => {
     const [showDetail, setShowDetail] = useState(false);
     const {isWinner, description, details, img, sale, title} = product;

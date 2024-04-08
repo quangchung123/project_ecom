@@ -1,5 +1,5 @@
 import React from 'react';
-import MyButton from "../Elements/Buttons/MyButton";
+import MyButton from "@/components/Elements/Buttons/MyButton";
 
 const ProductMarket = ({data}) => {
     return (
