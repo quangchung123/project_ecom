@@ -9,6 +9,8 @@
     @include flex($justify-content: center);
     height: 200px;
     position: relative;
+    //border-bottom: 2px solid $secondary-color;
+    border-radius: 20px;
     &__banner {
       background-color: $banner-color;
       height: 25px;
@@ -98,13 +100,19 @@
       }
     }
   }
+  hr {
+    margin: auto;
+    width: 95%;
+    color: #efeff6;
+    opacity: 0.4;
+  }
   &__body {
     @include flex();
     box-sizing: border-box;
     padding: 15px 10px 10px 20px;
     height: 250px;
     animation: modalFadeIn ease 2s;
-    border-top: 2px solid $secondary-color;
+    //border-top: 2px solid $secondary-color;
     &__info {
       @include flex($flex-direction: column);
       height: 100%;
@@ -218,6 +226,9 @@
             margin-right: 10px
           }
         }
+      }
+      hr {
+        width: 90%;
       }
       &__body {
         @include flex($flex-direction: column);

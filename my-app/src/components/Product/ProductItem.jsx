@@ -61,6 +61,7 @@ const ProductItem = ({product}) => {
                     </div>
                 </div>
             </div>
+            <hr/>
             {
                 showDetail && <ProductDetail dataDetail={details}/>
             }
