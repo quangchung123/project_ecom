@@ -53,9 +53,10 @@
         }
       }
       &__description {
-        font-style: normal;
+        //font-style: normal;
         color: $text-color-primary;
-        font-size: 18px;
+        font-size: 14px;
+        opacity: 0.9;
       }
       &__actions {
         @include flex();
@@ -117,6 +118,7 @@
               margin-top: 14px;
               i {
                 color: $primary-color;
+                margin-right: 5px;
               }
             }
           }
@@ -206,7 +208,7 @@
             position: absolute;
             @include flex($align-items: center, $flex-direction: column);
             margin-top: 0;
-            top: 153px;
+            top: 183px;
             left: 25%;
             box-sizing: border-box;
             padding-top: 5px;
